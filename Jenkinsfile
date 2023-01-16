@@ -44,6 +44,7 @@ pipeline {
         bat 'gradle publish'
       }
     }
+    
 
     stage('Slack Notifications') {
       steps {
