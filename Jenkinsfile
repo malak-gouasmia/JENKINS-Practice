@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage('build') {
-      post {
+      /*post {
         success {
           mail(subject: 'Build Success', body: 'New Build is deployed !', from: 'is_metidji@esi.dz', to: 'is_metidji@esi.dz')
         }
@@ -10,7 +10,7 @@ pipeline {
           mail(subject: 'Build Failure', body: "the new build isn't deployed succesfully !", from: 'is_metidji@esi.dz', to: 'is_metidji@esi.dz')
         }
         
-      }
+      }*/
       steps {
         bat(script: 'gradle build', label: 'gradle build')
         bat 'gradle javadoc'
